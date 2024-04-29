@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var path = window.location.pathname; 
+            $('.h_menu a').each(function(){
+            var href = new URL(this.href).pathname;
+                if(path == href) { 
+                    $(this).closest('li').addClass('active');
+                } else {
+                    $(this).closest('li').removeClass('active');
+                }
+            });
+        });
+    </script>
+    <style>
+    #header{
+        height: 80px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .logo {
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 300px;
+    }
+    .logo a {
+        color: #ec4899;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .h_menu{
+        margin-right: 100px;
+    }
+    .h_menu ul{
+        list-style-type: none;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+    }
+    .h_menu li{
+        line-height: 40px;
+        height: 40px;
+        width: 140px;
+        margin-left: -5px;
+        display: inline-block;
+        position: relative;
+    }
+    .h_menu a{
+        text-decoration: none;
+        display: block;
+        color: black;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0)
+    }
+    .h_menu a:hover {
+        background-color: #7e468e;
+        color: rgb(0, 0, 0);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .h_menu a.active {
+        color: #ec4899;
+        border-bottom: 2px solid red;
+    }
+    .h_menu a:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 10px rgba(30, 27, 27, 0.2);
+    }
+    #main {
+        margin-top: 70px;
+        padding-top: 100px;
+        background-image: url('www.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 600px;
+    }
+    .content-home-1 {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .content-home-1 h2 {
+        font-size: 2em;
+        letter-spacing: .56px;
+        line-height: 1.15;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-family: caslongrad, serif;
+        font-weight: 400;
+        color: #ec4899;
+        display: block;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+    }
+    .content-home-1 h4 {
+        font-size: 1.625rem;
+        letter-spacing: .56px;
+        line-height: 1.15;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-family: caslongrad, serif;
+        font-weight: 400;
+        color: #ec4899;
+        display: block;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="infinity_.png">
+            <a href="trangchu.html"><h2>Thần số học</h2></a>
+        </div>
+        <div class="h_menu">
+            <ul>
+                <li><a href="trangchu.html" class="active">Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="tracuu.html" id="menu-lookup">Tra cứu</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div class="content-home-1">
+            <h2>Chào mừng bạn đến với website thần số học</h2>
+            <h4>Nơi giúp bạn tìm kiếm được những điều ẩn sâu bên trong bản thân mình</h4>
+        </div>
+    </div>
+</body>
+</html>
